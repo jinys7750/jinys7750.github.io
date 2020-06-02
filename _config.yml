@@ -13,15 +13,15 @@ remote_theme : bencentra/centrarium
 # Site settings
 title: "찡찡이의 이슈티켓 zzing's Issue Ticket"
 subtitle: "하루의 한 단계씩 발전하는 개발자 되기"
-email: dptmf7750@gmail.com
-name: Yeseul Jin
+email: "dptmf7750@gmail.com"
+name: "Yeseul Jin"
 description: >
   A simple yet classy theme for your Jekyll website or blog.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://zzingyss.github.io" # the base hostname & protocol for your site
+url: "https://jinys7750.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
