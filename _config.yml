@@ -206,3 +206,5 @@ protocols:
     os_src: "git@github.com:bencentra/centrarium.com.git"
     
 
+
+theme: jekyll-theme-minimal
