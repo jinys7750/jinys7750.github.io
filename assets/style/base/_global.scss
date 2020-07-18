@@ -1,0 +1,132 @@
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $main-dark;
+    text-align: center;
+}
+.wrap {
+    opacity: 0;
+    transition: all 0.5s;
+    &.active {
+        transition-delay: 0.5s;
+        opacity: 1;
+    }
+}
+.tags {
+    display: flex;
+    padding: 0;
+    & > li {
+        margin-right: 0.25rem;
+        border: 1px solid $main-color;
+        border-radius: 4px;
+        padding: 0.1rem 0.25rem;
+        font-size: 0.75rem;
+        & > a {
+            color: $main-color;
+        }
+    }
+}
+
+.btn-wrap {
+    text-align: center;
+}
+.btn {
+    border: 2px solid $main-color;
+    color: $main-dark;
+    border-radius: 4px;
+    padding: 0.5rem 2rem;
+    transition: all 0.35s;
+    &:hover {
+        background-color: $main-color;
+        color: white;
+    }
+}
+.layout {
+    padding-top: 5.5rem;
+}
+.page-top {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .page-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        color: white;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+}
+@for $i from 1 through 5 {
+    .mb#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+}
+
+
+.post-list {
+    padding-top: 5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    & > li {
+        margin-bottom: 4.5rem;
+    }
+}
+.tags {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.35);
+    padding: 1rem 1.5rem 2.5rem;
+    height: 100%;
+    .post-back {
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: -3rem;
+        height: 12rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .post-txt {
+        display: block;
+        &:hover {
+            text-decoration: underline;
+        }
+        & > h5 {
+            font-size: 1.5rem;
+        }
+        & > p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: $grey;
+            line-height: 1.5;
+        }
+    }
+}
+
+.page-top {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.35);
+    }
+    & > .container {
+        position: relative;
+        z-index: 1;
+    }
+}

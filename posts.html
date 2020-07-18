@@ -1,0 +1,24 @@
+---
+layout: default
+pagination:
+  enabled: true
+---
+
+<div class="posts layout">
+    <section class="page-top" style="background-image:url('/assets/images/page-top-1.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="page-title">POSTS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recent container">
+        <ul class="row post-list">
+            {% for post in paginator.posts %}
+                {% include post-card.html %}
+            {% endfor %}
+        </ul>
+    </section>
+</div>

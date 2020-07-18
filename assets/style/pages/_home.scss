@@ -1,0 +1,78 @@
+.home {
+    width: 100%;
+    .home-top {
+        width: 100%;
+        //max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100vh;
+        max-height: 850px;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        background-image: url('/assets/images/back-4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 5rem;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 15rem;
+            background: linear-gradient(transparent, #f9fbfc);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .main-sm {
+            color: $main-dark;
+            opacity: 0.5;
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .main-title {
+            margin-top: 0;
+            font-size: 2.65rem;
+            color: $main-dark;
+            font-weight: 900;
+            transition-delay: 0.65s;
+            animation-delay: 0.65s;
+        }
+        .main-sub {
+            font-size: 1rem;
+            color: $grey;
+            font-weight: 300;
+            animation-delay: 1.25s;
+        }
+    }
+    .about {
+        .about-box {
+            color: $main-dark;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            background-color: $light;
+            border-radius: 3px;
+            line-height: 1.618;
+            & > strong {
+                margin-bottom: 1.25rem;
+                display: block;
+            }
+        }
+    }
+    .recent {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .post-list {
+            & > li {
+                margin-bottom: 0;
+                @include respond-to(max-width, 992px) {
+                    margin-bottom: 4.5rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

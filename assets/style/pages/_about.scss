@@ -1,0 +1,221 @@
+.about {
+    .about-content {
+        padding: 3rem 0;
+    }
+    .about-txt {
+        color: $main-dark;
+        line-height: 1.618;
+        padding: 1.5rem 1rem 3rem;
+        margin-bottom: 0;
+        text-align: center;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 5px 5px 25px rgba(0,0,0,0.15);
+        position: relative;
+        & > strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        & > img {
+            width: 5rem;
+            height: auto;
+            margin-bottom: 0.5rem;
+            &.pin {
+                width: 3.5rem;
+                margin: 0;
+                position: absolute;
+                top: -1.25rem;
+                left: 0rem;
+                &.pin2 {
+                    left: auto;
+                    right: -0.5rem;
+                }
+            }
+        }
+    }
+    .skill-list {
+        text-align: center;
+        & > li {
+            .skill {
+                width: 192px;
+                height: 192px;
+                margin: 0 auto;
+                background-color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 5px 5px 12px rgba(0,0,0,0.25);
+                position: relative;
+                transition: all 0.35s;
+                &:hover{
+                    transform: scale(1.15);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    border: 6px solid #eaeaea;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    border-radius: 50%;
+                }
+                .progress-ring {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    .progress-ring__circle {
+                        transition: stroke-dashoffset 0.35s;
+                        transform: rotate(-90deg);
+                        transform-origin: 50% 50%,
+                    }
+                }
+                & > p {
+                    margin: 0;
+                    color: $main-dark;
+                    & > img {
+                        display: block;
+                        width: 5rem;
+                        height: auto;
+                        margin: 0 auto;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .roadmap {
+        position: relative;
+    }
+    .roadmap-list {
+        margin: 0 auto;
+        width: 1.25rem;
+        & > li {
+            display: flex;
+            align-items: center;
+            padding-bottom: 4rem;
+            position: relative;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1.25rem;
+                height: 1.25rem;
+                border-radius: 50%;
+                border: 6px solid #606060;
+                background-color: white;
+                position: relative;
+                z-index: 1;
+            }
+            &::after {
+                content: '';
+                width: 3px;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0.635rem;
+                margin-left: -1.5px;
+                display: block;
+                background-color: #606060;
+            }
+            .roadmap-item {
+                display: inline-block;
+                color: #606060;
+                font-weight: 300;
+                position: absolute;
+                top: -5.5px;
+                left: 1.5rem;
+                white-space: nowrap;
+                & > hr {
+                    width: 1rem;
+                    height: 0;
+                    display: inline-block;
+                    margin: 0;
+                    border-style: dashed;
+                    border-width: 2px;
+                    border-color: #606060;
+                    margin-right: 3px;
+                    transform: translateY(-2px);
+                }
+                & > p {
+                    padding-left: 1.25rem;
+                    background-image: url('/assets/images/ico-branch.png');
+                    background-size: 1rem;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    height: 2rem;
+                    display: inline-flex;
+                    align-items: center;
+                    margin: 0;
+                    & > strong {
+                        margin-right: 0.25rem;
+                        opacity: 0.7;
+                    }
+                }
+            }
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+            &.branch {
+                position: absolute;
+                width: auto;
+                top: 0;
+                -webkit-transform: translateX(-105%);
+                transform: translateX(-99.5%);
+                overflow: hidden;
+                .roadmap-item {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    padding-top: 2.35rem;
+                    padding-right: 2rem;
+                    & > p {
+                        padding-right: 1.5rem;
+                    }
+                    &::before {
+                        content: '';
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        border-radius: 50%;
+                        border: 6px solid $main-color;
+                        background-color: white;
+                        display: block;
+                        position: absolute;
+                        right: 1.65rem;
+                        top: 2.65rem;
+                        z-index: 1;
+                    }
+                    &::after {
+                        content: '';
+                        width: 5rem;
+                        height: 3rem;
+                        background-color: transparent;
+                        border-radius: 5rem 6rem 0 0;
+                        border: 0 solid $main-color;
+                        border-left-width: 5px;
+                        border-top-width: 5px;
+                        position: absolute;
+                        top: 6px;
+                        right: -2.5rem;
+                        display: block;
+                    }
+                }
+                hr {
+                    display: none;
+                }
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

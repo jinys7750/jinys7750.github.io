@@ -1,0 +1,16 @@
+<li class="col-md-4">
+  <div class="post">
+      <div class="post-back" style="background-image: url('{{ post.image }}');"></div>
+      <ul class="tags">
+        {% for tag in post.tags %}
+        <li>
+          <a href="#">{{ tag }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-txt">
+          <h5>{{ post.title }}</h5>
+          <p>{{ post.content | strip_html | truncatewords: 15, "" }}...</p>
+      </a>
+  </div>
+</li>

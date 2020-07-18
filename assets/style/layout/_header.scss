@@ -1,0 +1,35 @@
+.header {
+    padding: 1.25rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.35s;
+    z-index: 100;
+    &.active {
+        background-color: rgba(255,255,255,0.55);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    }
+    .logo {
+        margin: 0;
+        img {
+            width: 8rem;
+        }
+    }
+    .hd-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-nav {
+        & > a {
+            margin-left: 2.5rem;
+            font-size: 0.9rem;
+            color: $main-dark;
+            transition: all 0.35s;
+            &:hover{
+                opacity: 0.65;
+            }
+        }
+    }
+}
