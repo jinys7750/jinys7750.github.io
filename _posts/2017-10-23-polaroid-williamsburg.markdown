@@ -5,6 +5,7 @@ date: 2017-10-23
 description: 
 image: /assets/images/placeholder-9.jpg
 author: Thomas Vaeth
+published: true
 tags: 
   - Dummy Text
   - Moon Drinking

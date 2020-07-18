@@ -65,7 +65,6 @@ autopages:
       mode: raw
       cased: true
 
-timezone: 'Europe/Andorra'
 # Build settings
 markdown: kramdown
 plugins:
