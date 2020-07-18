@@ -29,7 +29,7 @@ pagination:
   <section class="recent container">
       <h3 class="section-title"> - RECENT POSTS - </h3>
       <ul class="row post-list">
-        {% for post in paginator.posts limit:3 %}
+        {% for post in site.posts limit:3 %}
           {% include post-card.html %}
         {% endfor %}
       </ul>
