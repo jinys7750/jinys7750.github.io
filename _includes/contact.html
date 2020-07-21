@@ -1,27 +1,25 @@
-<section class="contact popup">
-  <div class="popup__close">
-    <div class="popup__exit"></div>
+<aside class="contact">
+  <div class="contact-container">
+      <div class="contact-body">
+          <div class="contact-content">
+              <div class="contact-img"></div>
+              <h5 class="contact-name">Yeseul Jin</h5>
+              <ul class="contact-list">
+                  <li>
+                      <a href="mailto:jinys7750@naver.com"><img src="/assets/images/ico-mail.png" alt=""/>jinys7750@naver.com</a>
+                  </li>
+                  <li><img src="/assets/images/ico-phone.png" alt=""/>010-8810-6038</li>
+                  <li><img src="/assets/images/ico-pin.png" alt=""/>서울특별시 신림동</li>
+                  <li>
+                      <a href="https://github.com/zzingysss"><img src="/assets/images/ico-github.png" alt=""/>github.com/zzingysss</a>
+                  </li>
+              </ul>
+          </div>
+          <footer class="contact-ft">
+              <div class="btn-wrap">
+                  <button class="btn" onclick="closeContact();">확인</button>
+              </div>
+          </footer>
+      </div>
   </div>
-  <div class="contact__container popup__container">
-    <div class="contact__img">
-      <figure class="absolute-bg" style="background-image: url({{ site.contact_img | prepend: site.baseurl }});"></figure>
-    </div>
-    <div class="contact__content">
-      <div class="contact__mast section-padding--half">
-        <div class="grid">
-          <h2>Contact</h2>
-        </div>
-      </div>
-
-      <div class="section-padding--none">
-        <hr class="sep"/>
-      </div>
-
-      <div class="contact__form section-padding--half">
-        <div class="grid-xlarge">
-          {% include formcarry.html %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</aside>

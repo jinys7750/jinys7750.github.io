@@ -9,8 +9,26 @@
           <nav class="main-nav">
               <a href="{{ '/about' | prepend: site.baseurl }}">ABOUT</a>
               <a href="{{ '/posts' | prepend: site.baseurl }}">POSTS</a>
-              <a href="#">CONTACT</a>
+              <a href="javascript:void(0);" onclick="openContact();">CONTACT</a>
           </nav>
       </div>
   </div>
 </header>
+{% include contact.html %}
+
+<script>
+  function openContact() {
+    const contact = document.querySelector('.contact');
+    contact.classList.add("active");
+    setTimeout(function(){
+        contact.style.opacity = 1;
+    },100);
+  }
+  function closeContact() {
+      const contact = document.querySelector('.contact');
+      contact.style.opacity = 0;
+      setTimeout(function(){
+          contact.classList.remove("active");
+      },350);
+  }
+</script>

@@ -194,12 +194,13 @@
                     &::after {
                         content: '';
                         width: 5rem;
-                        height: 3rem;
+                        height: 5.5rem;
                         background-color: transparent;
-                        border-radius: 5rem 6rem 0 0;
+                        border-radius: 32px;
                         border: 0 solid $main-color;
                         border-left-width: 5px;
                         border-top-width: 5px;
+                        border-bottom-width: 5px;
                         position: absolute;
                         top: 6px;
                         right: -2.5rem;
