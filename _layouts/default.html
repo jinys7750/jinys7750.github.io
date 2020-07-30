@@ -32,31 +32,6 @@ layout: compress
             document.querySelector('.header').classList.remove("active");
         }
     }
-
-    let circle = document.querySelectorAll('.skill circle');
-    for(let i=0; i<circle.length; i++) {
-        let radius = circle[i].r.baseVal.value;
-        let circumference = radius * 2 * Math.PI;
-        let val = circle[i].getAttribute("data-value");
-
-        circle[i].style.strokeDasharray = `${circumference} ${circumference}`;
-        circle[i].style.strokeDashoffset = `${circumference}`;
-
-        if (val < 101 && val > -1) {
-            const offset = circumference - val / 100 * circumference;
-            circle[i].style.strokeDashoffset = offset;
-        }  
-    }
-
-
-    let branch = document.querySelectorAll('.branch');
-    if(branch.length > 0) {
-        let rListHeight = document.querySelector('.roadmap-list > li').clientHeight + 0.25;
-        for(let i=0; i<branch.length; i++) {
-            const pos = branch[i].getAttribute("data-pos");
-            branch[i].style.top = rListHeight * Number(pos) + "px";
-        }
-    }
 </script>
 </body>
 </html>

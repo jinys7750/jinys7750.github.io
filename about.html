@@ -17,7 +17,7 @@ layout: default
                         <div class="row">
                             <div class="col">
                                 <p class="about-txt">
-                                    <img class="pin pin1" src="/assets/images/img-pin.png" alt=""/>
+                                    <!-- <img class="pin pin1" src="/assets/images/img-pin.png" alt=""/>-->
                                     <!-- <img class="pin pin2" src="/assets/images/img-pin.png" alt=""/>-->
                                     <img src="/assets/images/issue.png" alt=""/>
                                     <strong>[ 에러가 발생했나요? 이슈 티켓 발급 해주세요 😁 ]</strong>
@@ -30,7 +30,7 @@ layout: default
                             </div>
                         </div>
                     </div>
-                    <div class="container mb5">
+                    <div class="container mb5" style="opacity:0;" id="skillList">
                         <h3 class="section-title mb2">  SKILLS  </h3>
                         <ul class="row skill-list">
                             <li class="col-4">
@@ -131,7 +131,7 @@ layout: default
                         </ul>
                     </div>
 
-                    <div class="container">
+                    <div class="container" id="roadMapList" style="opacity:0;">
                         <h3 class="section-title mb2">  ROADMAP  </h3>
                         <div class="roadmap">
                             <ul class="roadmap-list">
@@ -204,3 +204,65 @@ layout: default
                     </div>
                 </section>
             </div>
+
+            <script>
+                let circle = document.querySelectorAll('.skill circle');
+                for(let i=0; i<circle.length; i++) {
+                    let radius = circle[i].r.baseVal.value;
+                    let circumference = radius * 2 * Math.PI;
+                    let val = circle[i].getAttribute("data-value");
+
+                    circle[i].style.strokeDasharray = `${circumference} ${circumference}`;
+                }
+
+
+                let branch = document.querySelectorAll('.branch');
+                if(branch.length > 0) {
+                    let rListHeight = document.querySelector('.roadmap-list > li').clientHeight + 0.25;
+                    for(let i=0; i<branch.length; i++) {
+                        const pos = branch[i].getAttribute("data-pos");
+                        branch[i].style.top = rListHeight * Number(pos) + "px";
+                    }
+                }
+
+                let skillList = new Waypoint({
+                    element: document.getElementById('skillList'),
+                    handler: function(direction) {
+                        document.getElementById('skillList').classList.add('animate__animated');
+                        document.getElementById('skillList').classList.add('animate__fadeIn');
+                        setTimeout(function(){
+                            let circle = document.querySelectorAll('.skill circle');
+                            for(let i=0; i<circle.length; i++) {
+                                let radius = circle[i].r.baseVal.value;
+                                let circumference = radius * 2 * Math.PI;
+                                let val = circle[i].getAttribute("data-value");
+
+                                circle[i].style.strokeDashoffset = `${circumference}`;
+
+                                    if (val < 101 && val > -1) {
+                                        const offset = circumference - val / 100 * circumference;
+                                        circle[i].style.strokeDashoffset = offset;
+                                }
+                            }
+                        },500);
+                    },
+                    offset: '65%'
+                });
+
+                let roadMapList = new Waypoint({
+                    element : document.getElementById('roadMapList'),
+                    handler : function(direction) {
+                        document.getElementById('roadMapList').classList.add('animate__animated');
+                        document.getElementById('roadMapList').classList.add('animate__fadeIn');
+                        setTimeout(function(){
+                            let roadmap = document.querySelectorAll('.roadmap-list > li');
+                            for(let i=0; i<roadmap.length; i++) {
+                                setTimeout(function(){
+                                    roadmap[i].classList.add('active');
+                                },200*i);
+                            }
+                        },500);
+                    },
+                    offset: '65%'
+                });
+            </script>

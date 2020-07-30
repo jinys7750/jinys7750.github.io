@@ -21,7 +21,7 @@ html, body {
   background-color: #f9fbfc;
 }
 
-ul {
+ul, ol {
   padding: 0;
 }
 
@@ -37,6 +37,269 @@ img {
 a, a:hover, a:active, a:focus {
   color: #303030;
   text-decoration: none;
+}
+
+.highlight, pre.highlight {
+  background: #31343f;
+  color: #dee2f7;
+}
+
+.highlight pre {
+  background: #31343f;
+}
+
+.highlight .hll {
+  background: #31343f;
+}
+
+.highlight .c {
+  color: #63677e;
+  font-style: italic;
+}
+
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+
+.highlight .k {
+  color: #e19ef5;
+}
+
+.highlight .l {
+  color: #a3eea0;
+}
+
+.highlight .n {
+  color: #dee2f7;
+}
+
+.highlight .o {
+  color: #dee2f7;
+}
+
+.highlight .p {
+  color: #dee2f7;
+}
+
+.highlight .cm {
+  color: #63677e;
+  font-style: italic;
+}
+
+.highlight .cp {
+  color: #63677e;
+  font-style: italic;
+}
+
+.highlight .c1 {
+  color: #63677e;
+  font-style: italic;
+}
+
+.highlight .cs {
+  color: #63677e;
+  font-style: italic;
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gs {
+  font-weight: 700;
+}
+
+.highlight .kc {
+  color: #e19ef5;
+}
+
+.highlight .kd {
+  color: #e19ef5;
+}
+
+.highlight .kn {
+  color: #e19ef5;
+}
+
+.highlight .kp {
+  color: #e19ef5;
+}
+
+.highlight .kr {
+  color: #e19ef5;
+}
+
+.highlight .kt {
+  color: #e19ef5;
+}
+
+.highlight .ld {
+  color: #a3eea0;
+}
+
+.highlight .m {
+  color: #eddc96;
+}
+
+.highlight .s {
+  color: #a3eea0;
+}
+
+.highlight .na {
+  color: #eddc96;
+}
+
+.highlight .nb {
+  color: #fdce68;
+}
+
+.highlight .nc {
+  color: #fdce68;
+}
+
+.highlight .no {
+  color: #fdce68;
+}
+
+.highlight .nd {
+  color: #fdce68;
+}
+
+.highlight .ni {
+  color: #fdce68;
+}
+
+.highlight .ne {
+  color: #fdce68;
+}
+
+.highlight .nf {
+  color: #dee2f7;
+}
+
+.highlight .nl {
+  color: #fdce68;
+}
+
+.highlight .nn {
+  color: #dee2f7;
+}
+
+.highlight .nx {
+  color: #dee2f7;
+}
+
+.highlight .py {
+  color: #fdce68;
+}
+
+.highlight .nt {
+  color: #f9867b;
+}
+
+.highlight .nv {
+  color: #fdce68;
+}
+
+.highlight .ow {
+  font-weight: 700;
+}
+
+.highlight .w {
+  color: #f8f8f2;
+}
+
+.highlight .mf {
+  color: #eddc96;
+}
+
+.highlight .mh {
+  color: #eddc96;
+}
+
+.highlight .mi {
+  color: #eddc96;
+}
+
+.highlight .mo {
+  color: #eddc96;
+}
+
+.highlight .sb {
+  color: #a3eea0;
+}
+
+.highlight .sc {
+  color: #a3eea0;
+}
+
+.highlight .sd {
+  color: #a3eea0;
+}
+
+.highlight .s2 {
+  color: #a3eea0;
+}
+
+.highlight .se {
+  color: #a3eea0;
+}
+
+.highlight .sh {
+  color: #a3eea0;
+}
+
+.highlight .si {
+  color: #a3eea0;
+}
+
+.highlight .sx {
+  color: #a3eea0;
+}
+
+.highlight .sr {
+  color: #7be2f9;
+}
+
+.highlight .s1 {
+  color: #a3eea0;
+}
+
+.highlight .ss {
+  color: #7be2f9;
+}
+
+.highlight .bp {
+  color: #fdce68;
+}
+
+.highlight .vc {
+  color: #fdce68;
+}
+
+.highlight .vg {
+  color: #fdce68;
+}
+
+.highlight .vi {
+  color: #f9867b;
+}
+
+.highlight .il {
+  color: #eddc96;
+}
+
+.highlight .gu {
+  color: #75715e;
+}
+
+.highlight .gd {
+  color: #f92672;
+}
+
+.highlight .gi {
+  color: #a6e22e;
 }
 
 .section-title {
@@ -458,8 +721,9 @@ a, a:hover, a:active, a:focus {
 }
 
 .about .skill-list > li .skill .progress-ring .progress-ring__circle {
-  -webkit-transition: stroke-dashoffset 0.35s;
-  transition: stroke-dashoffset 0.35s;
+  stroke-dashoffset: 584.5px;
+  -webkit-transition: stroke-dashoffset 0.65s;
+  transition: stroke-dashoffset 0.65s;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: 50% 50%;
@@ -497,6 +761,9 @@ a, a:hover, a:active, a:focus {
           align-items: center;
   padding-bottom: 4rem;
   position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .about .roadmap-list > li::before {
@@ -514,13 +781,23 @@ a, a:hover, a:active, a:focus {
 .about .roadmap-list > li::after {
   content: '';
   width: 3px;
-  height: 100%;
+  height: 0;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0.635rem;
   margin-left: -1.5px;
   display: block;
   background-color: #606060;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.about .roadmap-list > li.active {
+  opacity: 1;
+}
+
+.about .roadmap-list > li.active::after {
+  height: 100%;
 }
 
 .about .roadmap-list > li .roadmap-item {
@@ -646,14 +923,53 @@ a, a:hover, a:active, a:focus {
   background-repeat: no-repeat;
 }
 
+.detail .highlight, .detail pre.highlight {
+  font-family: 'D2 coding', "Consolas", monospace;
+  background: #222222;
+  color: #aab1bf;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+
+.detail pre.highlight {
+  padding: 1rem 1.5rem;
+}
+
 .detail .post-content {
   padding-bottom: 1rem;
+}
+
+.detail .post-content ul > li {
+  list-style: disc;
+}
+
+.detail .post-content ol > li {
+  list-style: decimal;
+}
+
+.detail .post-content ol, .detail .post-content ul {
+  padding-left: 40px;
+}
+
+.detail .post-content ol > li, .detail .post-content ul > li {
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.detail .post-content h1, .detail .post-content h2, .detail .post-content h3, .detail .post-content h4, .detail .post-content h5 {
+  margin-top: 3.5rem;
 }
 
 .detail .post-content h4 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.detail .post-content blockquote {
+  border-left: 5px solid #3976d9;
+  padding-left: 1rem;
+  font-size: 0.85rem;
 }
 
 .detail .post-content p {
